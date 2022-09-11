@@ -1,0 +1,9 @@
+[submodule ".vim/pack/lib/start/vim-smoothie"]
+	path = .vim/pack/lib/start/vim-smoothie
+	url = https://github.com/psliwka/vim-smoothie.git
+[submodule ".vim/pack/plugins/start/vim-strip-trailing-whitespace"]
+	path = .vim/pack/plugins/start/vim-strip-trailing-whitespace
+	url = https://github.com/axelf4/vim-strip-trailing-whitespace.git
+[submodule ".vim/pack/plugins/start/vim-smoothie"]
+	path = .vim/pack/plugins/start/vim-smoothie
+	url = https://github.com/psliwka/vim-smoothie.git
