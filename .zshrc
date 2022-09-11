@@ -21,3 +21,10 @@ alias mv="mv -i"           # -i prompts before overwrite
 alias mkdir="mkdir -p"     # -p make parent dirs as needed
 alias df="df -h"           # -h prints human readable format
 
+
+source /Users/nikhil/.config/broot/launcher/bash/br
+
+# ^w functionality
+autoload -U select-word-style
+select-word-style bash
+export WORDCHARS='.-'
