@@ -24,6 +24,10 @@ alias df="df -h"           # -h prints human readable format
 
 source /Users/nikhil/.config/broot/launcher/bash/br
 
+# smartcase autocompletion
+zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
+autoload -U compinit  && compinit
+
 # ^w functionality
 autoload -U select-word-style
 select-word-style bash
