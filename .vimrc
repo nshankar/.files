@@ -12,16 +12,10 @@ syntax on
 
 " Disable the default Vim startup message.
 set shortmess+=I
+set shortmess-=S "show search count e.g. [1/X]
 
 " Show line numbers.
 set number
-
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
 set relativenumber
 
 " Always show the status line at the bottom, even if you only have one window open.
@@ -48,6 +42,7 @@ set smartcase
 
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch
+set hlsearch
 
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
@@ -87,11 +82,9 @@ endif
 " My extra settings
 colorscheme monokai
 set autoindent
-set hlsearch
 set tabstop=4
 set shiftwidth=2
 set expandtab
-set shortmess-=S
 noremap s i <Esc>r
 
 " Close brackets automatically, with return
@@ -102,3 +95,11 @@ inoremap [<cr> [<cr>]<C-O><S-O>
 " Yank to system clipboard
 noremap <Leader>y "*y
 noremap <Leader>p "*p
+
+" File Find {{{
+set path+=**
+set wildmenu
+set wildmode=list:longest,full
+set wildignorecase
+set wildignore+=**/node_modules/**
+" }}}

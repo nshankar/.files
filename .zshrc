@@ -12,6 +12,7 @@ alias ll="ls -lh"
 alias gs="git status"
 alias gc="git commit"
 alias v="vim"
+alias la=ls -la
 
 # Avoid mistyping
 alias sl=ls
@@ -32,3 +33,5 @@ autoload -U compinit  && compinit
 autoload -U select-word-style
 select-word-style bash
 export WORDCHARS='.-'
+
+[ -f "/Users/nikhil/.ghcup/env" ] && source "/Users/nikhil/.ghcup/env" # ghcup-env
