@@ -1,3 +1,9 @@
 [user]
-	name = nshankar
-	email = nshankar@umich.edu
+	name = Nikhil Shankar
+	email = raknahs@amazon.com
+[core]
+	editor = vim
+[pull]
+	ff = only
+[diff]
+	tool = vimdiff

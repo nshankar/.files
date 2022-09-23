@@ -50,10 +50,6 @@ nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
 
-" Enable mouse support. You should avoid relying on this too much, but it can
-" sometimes be convenient.
-set mouse+=a
-
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
 " for movement, rather than using more efficient movement commands, is also a
@@ -68,7 +64,7 @@ nnoremap <Down>  :echoe "Use j"<CR>
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>" Add optional packages.
+inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 "
 " The matchit plugin makes the % command work better, but it is not backwards
@@ -87,6 +83,14 @@ set shiftwidth=2
 set expandtab
 noremap s i <Esc>r
 
+" movement
+noremap <c-l> <c-w>l
+noremap <c-k> <c-w>k
+noremap <c-j> <c-w>j
+noremap <c-h> <c-w>h
+
+set iskeyword-=_
+
 " Close brackets automatically, with return
 inoremap {<cr> {<cr>}<C-O><S-O>
 inoremap (<cr> (<cr>)<C-O><S-O>
@@ -99,7 +103,7 @@ noremap <Leader>p "*p
 " File Find {{{
 set path+=**
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=list,longest
 set wildignorecase
 set wildignore+=**/node_modules/**
 " }}}
