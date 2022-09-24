@@ -1,9 +1,10 @@
 [user]
-	name = Nikhil Shankar
-	email = raknahs@amazon.com
+	name = nshankar
+	email = nshankar@umich.edu
 [core]
 	editor = vim
 [pull]
 	ff = only
 [diff]
-	tool = vimdiff
+    tool = vimdiff
+	excludesfile = ~/.gitignore_global

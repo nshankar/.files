@@ -7,3 +7,6 @@
 [submodule ".vim/pack/plugins/start/vim-tmux-navigator.git"]
 	path = .vim/pack/plugins/start/vim-tmux-navigator.git
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh
