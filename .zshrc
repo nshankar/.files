@@ -77,10 +77,6 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
 source ~/.zsh-z
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Evals
-eval "$(direnv hook zsh)"
-eval "$(starship init zsh)"
-
 ### Completion and typing utils
 # completion
 autoload bashcompinit && bashcompinit
@@ -96,4 +92,8 @@ zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 autoload -U select-word-style
 select-word-style bash
 export WORDCHARS='.-'
+
+# Evals
+eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"
 
