@@ -6,4 +6,5 @@
 [pull]
 	ff = only
 [diff]
-	tool = vimdiff
+    tool = vimdiff
+	excludesfile = ~/.gitignore_global
