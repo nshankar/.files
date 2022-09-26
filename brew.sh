@@ -26,7 +26,6 @@ brew install gnu-sed --with-default-names
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
 brew install grep
-brew install openssh
 brew install screen
 brew install php
 brew install gmp
@@ -37,14 +36,9 @@ brew install ack
 
 # zsh helpers
 brew install starship
-brew install zsh-z
+git clone https://github.com/agkozak/zsh-z.git ~/.zsh-z # black sheep
 brew install zsh-autosuggestions
 brew install zsh-vi-mode
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-
-
-# other
-
