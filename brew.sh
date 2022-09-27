@@ -33,6 +33,7 @@ brew install gmp
 # cli tools
 brew install tmux
 brew install ack
+brew install ctags
 
 # zsh helpers
 brew install starship

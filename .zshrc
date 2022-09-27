@@ -61,6 +61,7 @@ alias df="df -h"           # -h prints human readable format
 
 alias python='python3'     # command python will ignore the alias and use python2
 alias pip='pip3'
+alias ctags="`brew --prefix`/bin/ctags"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -74,7 +75,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
     completion
 )
 
-source ~/.zsh-z
+source ~/.zsh-z/zsh-z.plugin.zsh
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ### Completion and typing utils
