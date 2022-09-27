@@ -10,15 +10,6 @@
 [submodule ".vim/pack/plugins/start/vim-tmux-navigator"]
 	path = .vim/pack/plugins/start/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
-	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".oh-my-zsh/custom/plugins/zsh-z"]
-	path = .oh-my-zsh/custom/plugins/zsh-z
-	url = https://github.com/agkozak/zsh-z
-[submodule ".oh-my-zsh/custom/themes/spaceship-prompt"]
-	path = .oh-my-zsh/custom/themes/spaceship-prompt
-	url = https://github.com/spaceship-prompt/spaceship-prompt.git
+[submodule ".vim/pack/plugins/start/vim-surround"]
+	path = .vim/pack/plugins/start/vim-surround
+	url = https://tpope.io/vim/surround.git
