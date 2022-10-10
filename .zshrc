@@ -76,7 +76,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
 )
 
 source ~/.zsh-z/zsh-z.plugin.zsh
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
@@ -85,7 +85,6 @@ fi
 
 ### Completion and typing utils
 # completion
-bindkey '^ ' forward-word # Helps with zsh-autosuggestions
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit -i
 complete -C '/usr/local/bin/aws_completer' aws
@@ -99,6 +98,8 @@ zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 autoload -U select-word-style
 select-word-style bash
 export WORDCHARS='.-'
+bindkey '^F' forward-word # Helps with zsh-autosuggestions
+bindkey '^B' backward-word # Helps with zsh-autosuggestions
 
 # Evals
 eval "$(direnv hook zsh)"
