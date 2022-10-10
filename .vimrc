@@ -91,6 +91,9 @@ noremap <c-h> <c-w>h
 
 set iskeyword-=_
 
+" speed!
+set noesckeys
+
 " Close brackets automatically, with return
 inoremap {<cr> {<cr>}<C-O><S-O>
 inoremap (<cr> (<cr>)<C-O><S-O>
@@ -100,10 +103,27 @@ inoremap [<cr> [<cr>]<C-O><S-O>
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 
+" Improved file finding {{{
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>/ :BLines<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+" }}}
+
 " File Find {{{
 set path+=**
 set wildmenu
 set wildmode=list,longest
 set wildignorecase
 set wildignore+=**/node_modules/**
+" }}}
+
+" NERDTree settings {{{
+" Start NERDTree, unless a file or session is specified, eg. vim -S session_file.vim.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " }}}

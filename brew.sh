@@ -33,6 +33,8 @@ brew install gmp
 # cli tools
 brew install tmux
 brew install ack
+brew install ripgrep
+brew install fzf
 brew install ctags
 
 # zsh helpers

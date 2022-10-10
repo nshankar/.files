@@ -61,7 +61,7 @@ alias df="df -h"           # -h prints human readable format
 
 alias python='python3'     # command python will ignore the alias and use python2
 alias pip='pip3'
-alias ctags="`brew --prefix`/bin/ctags"
+alias ctags=$(brew --prefix)/bin/ctags
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -78,8 +78,14 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
 source ~/.zsh-z/zsh-z.plugin.zsh
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+  export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
+
 ### Completion and typing utils
 # completion
+bindkey '^ ' forward-word # Helps with zsh-autosuggestions
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit -i
 complete -C '/usr/local/bin/aws_completer' aws
