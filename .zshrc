@@ -1,5 +1,5 @@
 # User configuration
-export PATH="/opt/homebrew/bin:/Users/raknahs/.toolbox/bin:$PATH"
+export PATH="/apollo/env/AmazonAwsCli/bin:/opt/homebrew/bin:$HOME/.toolbox/bin:$PATH"
 
 # mwinit helper
 cloud_desktop=raknahs.aka.corp.amazon.com
@@ -76,6 +76,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
 )
 
 source ~/.zsh-z/zsh-z.plugin.zsh
+export ZSHZ_CASE=smart
 # source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 if type rg &> /dev/null; then
@@ -86,10 +87,9 @@ fi
 ### Completion and typing utils
 # completion
 autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit -i
 complete -C '/usr/local/bin/aws_completer' aws
-
 fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 
 # smartcase autocompletion
 zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'

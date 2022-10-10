@@ -41,7 +41,7 @@ brew install ctags
 brew install starship
 git clone https://github.com/agkozak/zsh-z.git ~/.zsh-z # black sheep
 brew install zsh-autosuggestions
-brew install zsh-vi-mode
+#brew install zsh-vi-mode
 
 # Remove outdated versions from the cellar.
 brew cleanup
