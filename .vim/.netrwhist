@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/workplace/raknahs/canvas/src/CanvasCollaborationService/test/unite_event_processor'
+let g:netrw_dirhist_7='/workplace/raknahs/canvas/src/CanvasCollaborationService/src/canvas_collaboration_service/clients'
+let g:netrw_dirhist_6='/workplace/raknahs/canvas/src/CanvasCollaborationService/src/canvas_collaboration_service'
+let g:netrw_dirhist_5='/workplace/raknahs/canvas/src/CanvasCollaborationService/src'
+let g:netrw_dirhist_4='/workplace/raknahs/canvas/src/CanvasCollaborationService/src/canvas_collaboration_service/unite_event_processor'
+let g:netrw_dirhist_3='/workplace/raknahs/canvas/src/CanvasCollaborationService/test'
+let g:netrw_dirhist_2='/local/home/raknahs/.files/.vim/pack/plugins/start/vim-smoothie'
+let g:netrw_dirhist_1='/workplace/raknahs/canvas/src/CanvasCollaborationService'
