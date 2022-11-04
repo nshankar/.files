@@ -89,7 +89,7 @@ noremap <c-k> <c-w>k
 noremap <c-j> <c-w>j
 noremap <c-h> <c-w>h
 
-set iskeyword-=_
+"set iskeyword-=_
 
 " speed!
 set noesckeys
@@ -103,7 +103,8 @@ inoremap [<cr> [<cr>]<C-O><S-O>
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 
-" Improved file finding {{{
+"* Improved file finding {{{
+set rtp+=~/.fzf
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
@@ -122,8 +123,8 @@ set wildignore+=**/node_modules/**
 
 " NERDTree settings {{{
 " Start NERDTree, unless a file or session is specified, eg. vim -S session_file.vim.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
+" auutocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " }}}

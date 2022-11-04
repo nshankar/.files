@@ -77,11 +77,13 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
 
 source ~/.zsh-z/zsh-z.plugin.zsh
 # source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+export EDITOR=vim
 
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ### Completion and typing utils
 # completion
@@ -104,4 +106,26 @@ bindkey '^B' backward-word # Helps with zsh-autosuggestions
 # Evals
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/raknahs/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/raknahs/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/raknahs/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/raknahs/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
