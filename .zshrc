@@ -1,3 +1,5 @@
+# In case of emacs tramp
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 # User configuration
 export PATH="/apollo/env/AmazonAwsCli/bin:/opt/homebrew/bin:$HOME/.toolbox/bin:$PATH"
 
@@ -22,12 +24,15 @@ alias bba='brazil-build apollo-pkg'
 alias bre='brazil-runtime-exec'
 alias brc='brazil-recursive-cmd'
 alias bws='brazil ws'
+alias bvs='brazil vs'
 alias bwsuse='bws use --gitMode -p'
 alias bwscreate='bws create -n'
 alias brc=brazil-recursive-cmd
 alias bbr='brc brazil-build'
 alias bball='brc --allPackages'
 alias bbb='brc --allPackages brazil-build'
+
+alias maws=/apollo/env/AWSMinervaCLI/bin/aws-minerva
 
 # ada helper
 export DEV_ACCOUNT=504624935930
@@ -77,7 +82,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
 
 source ~/.zsh-z/zsh-z.plugin.zsh
 export ZSHZ_CASE=smart
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 export EDITOR=vim
 
 if type rg &> /dev/null; then
@@ -108,3 +113,6 @@ eval "$(starship init zsh)"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export AWS_EC2_METADATA_DISABLED=true
+
