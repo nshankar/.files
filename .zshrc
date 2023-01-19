@@ -1,5 +1,5 @@
 # User configuration
-export PATH="/opt/homebrew/bin:/Users/raknahs/.toolbox/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:/opt/homebrew/bin:/Users/raknahs/.toolbox/bin:$PATH"
 
 # mwinit helper
 cloud_desktop=raknahs.aka.corp.amazon.com
@@ -129,3 +129,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+bindkey -e #helps with C-E and C-A in vterm

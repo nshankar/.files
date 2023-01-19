@@ -36,6 +36,7 @@ brew install ack
 brew install ripgrep
 brew install fzf
 brew install ctags
+brew install tree
 
 # zsh helpers
 brew install starship
